@@ -1,0 +1,13 @@
+version: '2'
+services:
+  #############################################
+  ### UI
+  #############################################
+  app-foo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "app-foo:dev"
+    environment:
+      - NODE_ENV=dev
+      - SOURCE_EDIT_MODE=1
